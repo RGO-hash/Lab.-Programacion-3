@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- 
+    Archivo: index.html
+    Propósito: Tabla con 102 etiquetas HTML + explicación paso a paso dentro del código.
+    Instrucciones: Guardar como index.html y abrir en el navegador.
+  -->
+
+  <!-- Metadatos básicos -->
+  <meta charset="utf-8">                     <!-- Codificación UTF-8 para soportar acentos y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive para móviles -->
+  <meta name="description" content="Listado y ejemplos de 102 etiquetas HTML con explicación paso a paso dentro del mismo archivo.">
+  <title>102 Etiquetas HTML — Tabla con ejemplos y explicación</title>
+
+  <!-- Estilos internos (para que sea un solo archivo). -->
+  <style>
+    /* --------------------------
+       Estilos globales y tipografía
+       -------------------------- */
+    :root{
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --accent: #004d99;
+      --muted: #666;
+      --border: #d0d7df;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* Contenedor principal centrado */
+    .wrap{
+      max-width:1100px;
+      margin:28px auto;
+      padding:20px;
+    }
+
+    /* Título principal */
+    header.page-header{
+      background:linear-gradient(90deg,var(--accent), #0b5ea8);
+      color:white;
+      padding:18px 20px;
+      border-radius:8px;
+      box-shadow: 0 6px 18px rgba(3, 58, 120, 0.12);
+    }
+    header.page-header h1{
+      margin:0;
+      font-size:1.35rem;
+      letter-spacing:0.2px;
+    }
+    header.page-header p{
+      margin:6px 0 0;
+      font-size:0.95rem;
+      opacity:0.95;
+    }
+
+    /* Botón / nota de exportar (solo visual) */
+    .note {
+      margin-top:10px;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    /* Tabla: estilos de presentación */
+    .table-wrap{
+      margin-top:18px;
+      overflow:auto; /* Permite scroll si la tabla es demasiado ancha en pantallas pequeñas */
+      background:var(--card);
+      border-radius:8px;
+      border:1px solid var(--border);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:980px; /* obliga scroll horizontal en pantallas muy pequeñas */
+    }
+    thead th{
+      position:sticky;
+      top:0;
+      background:var(--accent);
+      color:white;
+      padding:12px 10px;
+      text-align:left;
+      font-weight:600;
+      font-size:0.95rem;
+      border-bottom:2px solid rgba(255,255,255,0.06);
+    }
+    tbody td{
+      padding:10px;
+      border-bottom:1px solid var(--border);
+      vertical-align:top;
+      font-size:0.95rem;
+    }
+    tbody tr:nth-child(even){
+      background: #fbfdff;
+    }
+    tbody tr:hover{
+      background: #f1f8ff;
+    }
+
+    td.num { width:48px; font-weight:700; color:var(--accent); }
+    td.etq { width:140px; font-family:monospace; color:#0b4c86; }
+    td.desc { width: 340px; color:#222; }
+    td.ej { width:340px; font-family:monospace; background:#f6f8fa; border-radius:4px; padding:8px; }
+    td.ad { width:200px; color:var(--muted); }
+
+    code.inline {
+      background:#eef3f8;
+      padding:2px 6px;
+      border-radius:4px;
+      font-family: "Courier New", monospace;
+      font-size:0.92rem;
+      color:#003a66;
+    }
+
+    /* Pie / créditos */
+    footer.page-footer{
+      margin-top:16px;
+      padding:14px 10px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    /* Responsive: en pantallas pequeñas reduce paddings y tamaño de fuente */
+    @media (max-width:700px){
+      header.page-header h1 { font-size:1.05rem; }
+      thead th { font-size:0.85rem; }
+      tbody td { font-size:0.86rem; padding:8px; }
+      .wrap { padding:12px; }
+    }
+
+  </style>
+</head>
+<body>
+  <!--
+    EXPLICACIÓN GENERAL (visible sólo en el código):
+    ------------------------------------------------
+    Este archivo HTML contiene una tabla con 102 entradas (1..102).
+    Cada fila representa:
+      - Nº (sequential)
+      - Etiqueta (en formato de código, p. ej. <a>)
+      - Descripción (qué have / para qué sirve)
+      - Ejemplo de uso (cómo escribirla)
+      - Elemento adicional (nota práctica / atributo recomendado / observación)
+
+    Estructura del documento:
+      - header.page-header  -> título y descripción breve
+      - .table-wrap         -> contenedor visual que incluye la <table>
+      - <table>             -> encabezado (thead) + cuerpo (tbody) con 102 filas
+      - footer.page-footer  -> créditos y nota final
+
+    Lo diseñé para que puedas entregar un único archivo: abrirlo en el navegador y
+    presentar la tabla completa. En el interior del propio documento hay comentarios
+    que explican cada bloque (tal como lo pediste).
+  -->
+
+  <div class="wrap">
+
+    <!-- HEADER: título y propósito -->
+    <header class="page-header" role="banner">
+      <!-- Explicación en primera persona (estilo "yo lo hice"):
+           Aquí yo coloqué el título y la breve descripción para que quien abra
+           el documento entienda de qué trata. -->
+      <h1>Listado de 102 Etiquetas HTML — Ejemplos y notas</h1>
+      <p>Tabla completa con cada etiqueta, descripción, ejemplo y comentario adicional. (Explicaciones dentro del código.)</p>
+      <div class="note">Nota: los ejemplos en la columna "Ejemplo de uso" muestran la sintaxis tal cual; están mostrados dentro de <code class="inline">&lt;code&gt;</code> para evitar que el navegador los ejecute.</div>
+    </header>
+
+    <!-- TABLE WRAP: contenedor visual -->
+    <div class="table-wrap" role="region" aria-label="Tabla de 102 etiquetas HTML">
+      <!--
+        Aquí empieza la tabla:
+        - thead contiene los títulos de columna
+        - tbody contiene 102 filas (cada fila = una etiqueta)
+        En las celdas usamos <code> (texto en monospace) para mostrar ejemplos sin que se interpreten.
+      -->
+      <table>
+        <thead>
+          <tr>
+            <th>Nº</th>
+            <th>Etiqueta</th>
+            <th>Descripción</th>
+            <th>Ejemplo de uso</th>
+            <th>Elemento adicional</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- ******************
+               Grupo 1: Nº 1 - 25
+               Explicación: aquí agrupo las etiquetas básicas de estructura y texto
+               ****************** -->
+          <tr><td class="num">1</td><td class="etq"><code>&lt;a&gt;</code></td><td class="desc">Define un hipervínculo; enlaza a otra URL o recurso.</td><td class="ej"><code>&lt;a href="https://example.com"&gt;Ir a Ejemplo&lt;/a&gt;</code></td><td class="ad">Atributo útil: <code>target="_blank"</code> para abrir en nueva pestaña.</td></tr>
+
+          <tr><td class="num">2</td><td class="etq"><code>&lt;p&gt;</code></td><td class="desc">Define un párrafo de texto.</td><td class="ej"><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></td><td class="ad">Puede contener elementos en línea como <code>&lt;a&gt;</code>, <code>&lt;em&gt;</code>.</td></tr>
+
+          <tr><td class="num">3</td><td class="etq"><code>&lt;img&gt;</code></td><td class="desc">Inserta una imagen; auto-cerrada (void).</td><td class="ej"><code>&lt;img src="foto.jpg" alt="Descripción"&gt;</code></td><td class="ad">Siempre usar <code>alt</code> por accesibilidad; controlar tamaño con CSS.</td></tr>
+
+          <tr><td class="num">4</td><td class="etq"><code>&lt;div&gt;</code></td><td class="desc">Contenedor genérico en bloque para agrupar elementos.</td><td class="ej"><code>&lt;div class="card"&gt;Contenido&lt;/div&gt;</code></td><td class="ad">Se usa para layout y aplicar estilos CSS.</td></tr>
+
+          <tr><td class="num">5</td><td class="etq"><code>&lt;h1&gt;</code></td><td class="desc">Encabezado de nivel 1 (más importante en la jerarquía).</td><td class="ej"><code>&lt;h1&gt;Título principal&lt;/h1&gt;</code></td><td class="ad">Solo uno por página para SEO y accesibilidad.</td></tr>
+
+          <tr><td class="num">6</td><td class="etq"><code>&lt;h2&gt;</code></td><td class="desc">Encabezado de nivel 2.</td><td class="ej"><code>&lt;h2&gt;Subtítulo&lt;/h2&gt;</code></td><td class="ad">Usado para secciones principales bajo &lt;h1&gt;.</td></tr>
+
+          <tr><td class="num">7</td><td class="etq"><code>&lt;h3&gt;</code></td><td class="desc">Encabezado de nivel 3 para subsecciones.</td><td class="ej"><code>&lt;h3&gt;Encabezado 3&lt;/h3&gt;</code></td><td class="ad">Mantén la jerarquía semántica.</td></tr>
+
+          <tr><td class="num">8</td><td class="etq"><code>&lt;h4&gt;</code></td><td class="desc">Encabezado de nivel 4.</td><td class="ej"><code>&lt;h4&gt;Encabezado 4&lt;/h4&gt;</code></td><td class="ad">Usado en estructuras complejas.</td></tr>
+
+          <tr><td class="num">9</td><td class="etq"><code>&lt;h5&gt;</code></td><td class="desc">Encabezado de nivel 5.</td><td class="ej"><code>&lt;h5&gt;Encabezado 5&lt;/h5&gt;</code></td><td class="ad">Raramente necesario.</td></tr>
+
+          <tr><td class="num">10</td><td class="etq"><code>&lt;h6&gt;</code></td><td class="desc">Encabezado de nivel 6 (menos importante).</td><td class="ej"><code>&lt;h6&gt;Encabezado 6&lt;/h6&gt;</code></td><td class="ad">Último nivel de jerarquía.</td></tr>
+
+          <tr><td class="num">11</td><td class="etq"><code>&lt;span&gt;</code></td><td class="desc">Contenedor en línea para aplicar estilo a parte del texto.</td><td class="ej"><code>&lt;span class="rojo"&gt;Texto&lt;/span&gt;</code></td><td class="ad">Útil para estilizar palabras dentro de un párrafo.</td></tr>
+
+          <tr><td class="num">12</td><td class="etq"><code>&lt;strong&gt;</code></td><td class="desc">Texto con importancia semántica (aparece en negrita).</td><td class="ej"><code>&lt;strong&gt;Importante&lt;/strong&gt;</code></td><td class="ad">Mejor que &lt;b&gt; para semántica.</td></tr>
+
+          <tr><td class="num">13</td><td class="etq"><code>&lt;em&gt;</code></td><td class="desc">Texto enfatizado (aparece en cursiva).</td><td class="ej"><code>&lt;em&gt;Énfasis&lt;/em&gt;</code></td><td class="ad">Equivalente semántico a &lt;i&gt; cuando hay énfasis.</td></tr>
+
+          <tr><td class="num">14</td><td class="etq"><code>&lt;br&gt;</code></td><td class="desc">Inserta un salto de línea (void element).</td><td class="ej"><code>Linea1&lt;br&gt;Linea2</code></td><td class="ad">No abusar dentro de bloques de texto, usar párrafos.</td></tr>
+
+          <tr><td class="num">15</td><td class="etq"><code>&lt;hr&gt;</code></td><td class="desc">Línea horizontal para separar contenidos.</td><td class="ej"><code>&lt;hr&gt;</code></td><td class="ad">Útil para divisiones temáticas.</td></tr>
+
+          <tr><td class="num">16</td><td class="etq"><code>&lt;ul&gt;</code></td><td class="desc">Lista desordenada (viñetas).</td><td class="ej"><code>&lt;ul&gt;&lt;li&gt;Uno&lt;/li&gt;&lt;/ul&gt;</code></td><td class="ad">Combinada con &lt;li&gt;.</td></tr>
+
+          <tr><td class="num">17</td><td class="etq"><code>&lt;ol&gt;</code></td><td class="desc">Lista ordenada (numerada).</td><td class="ej"><code>&lt;ol&gt;&lt;li&gt;Primero&lt;/li&gt;&lt;/ol&gt;</code></td><td class="ad">Tiene atributos como <code>start</code>, <code>type</code>.</td></tr>
+
+          <tr><td class="num">18</td><td class="etq"><code>&lt;li&gt;</code></td><td class="desc">Elemento de una lista (ul/ol).</td><td class="ej"><code>&lt;li&gt;Elemento&lt;/li&gt;</code></td><td class="ad">Puede contener bloques y en línea.</td></tr>
+
+          <tr><td class="num">19</td><td class="etq"><code>&lt;table&gt;</code></td><td class="desc">Crea una tabla para datos tabulares.</td><td class="ej"><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Dato&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td><td class="ad">Usar para datos tabulares, no para layout.</td></tr>
+
+          <tr><td class="num">20</td><td class="etq"><code>&lt;tr&gt;</code></td><td class="desc">Fila de una tabla.</td><td class="ej"><code>&lt;tr&gt;&lt;td&gt;Celda&lt;/td&gt;&lt;/tr&gt;</code></td><td class="ad">Contiene celdas (&lt;td&gt; o &lt;th&gt;).</td></tr>
+
+          <tr><td class="num">21</td><td class="etq"><code>&lt;td&gt;</code></td><td class="desc">Celda de datos en una fila de tabla.</td><td class="ej"><code>&lt;td&gt;Contenido&lt;/td&gt;</code></td><td class="ad">Por defecto alineada a la izquierda.</td></tr>
+
+          <tr><td class="num">22</td><td class="etq"><code>&lt;th&gt;</code></td><td class="desc">Celda de encabezado de tabla (normalmente en negrita/centrado).</td><td class="ej"><code>&lt;th&gt;Título&lt;/th&gt;</code></td><td class="ad">Usar en la primera fila o en &lt;thead&gt;.</td></tr>
+
+          <tr><td class="num">23</td><td class="etq"><code>&lt;thead&gt;</code></td><td class="desc">Agrupa la sección de encabezados de la tabla.</td><td class="ej"><code>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Col&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</code></td><td class="ad">Ayuda en accesibilidad y estilo.</td></tr>
+
+          <tr><td class="num">24</td><td class="etq"><code>&lt;tbody&gt;</code></td><td class="desc">Agrupa el cuerpo principal de la tabla.</td><td class="ej"><code>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Dato&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code></td><td class="ad">Separar &lt;thead&gt; de &lt;tfoot&gt; es buena práctica.</td></tr>
+
+          <tr><td class="num">25</td><td class="etq"><code>&lt;tfoot&gt;</code></td><td class="desc">Agrupa el pie de tabla (totales, resúmenes).</td><td class="ej"><code>&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code></td><td class="ad">Puede colocarse antes o después de tbody; navegador lo ajusta.</td></tr>
+
+          <!-- ******************
+               Grupo 2: Nº 26 - 50
+               Form y multimedia
+               ****************** -->
+
+          <tr><td class="num">26</td><td class="etq"><code>&lt;form&gt;</code></td><td class="desc">Contenedor para campos que envían datos a un servidor.</td><td class="ej"><code>&lt;form action="procesar.php" method="post"&gt;...&lt;/form&gt;</code></td><td class="ad">Atributos: <code>action</code>, <code>method</code>.</td></tr>
+
+          <tr><td class="num">27</td><td class="etq"><code>&lt;input&gt;</code></td><td class="desc">Campo de entrada (muchos tipos disponibles con <code>type</code>).</td><td class="ej"><code>&lt;input type="text" name="usuario"&gt;</code></td><td class="ad">Tipos comunes: text, email, password, number.</td></tr>
+
+          <tr><td class="num">28</td><td class="etq"><code>&lt;label&gt;</code></td><td class="desc">Etiqueta asociada a un control de formulario para accesibilidad.</td><td class="ej"><code>&lt;label for="nom"&gt;Nombre:&lt;/label&gt;</code></td><td class="ad">Usar <code>for</code> enlazando al <code>id</code> del control.</td></tr>
+
+          <tr><td class="num">29</td><td class="etq"><code>&lt;textarea&gt;</code></td><td class="desc">Área de texto multilinea para comentarios largos.</td><td class="ej"><code>&lt;textarea rows="4"&gt;Escribe...&lt;/textarea&gt;</code></td><td class="ad">Soporta atributos: rows, cols, maxlength.</td></tr>
+
+          <tr><td class="num">30</td><td class="etq"><code>&lt;button&gt;</code></td><td class="desc">Botón interactivo (submit, reset, button).</td><td class="ej"><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></td><td class="ad">Preferir &lt;button&gt; sobre &lt;input type="submit"&gt; para mayor flexibilidad.</td></tr>
+
+          <tr><td class="num">31</td><td class="etq"><code>&lt;select&gt;</code></td><td class="desc">Lista desplegable para escoger una opción.</td><td class="ej"><code>&lt;select&gt;&lt;option&gt;A&lt;/option&gt;&lt;/select&gt;</code></td><td class="ad">Combinar con &lt;option&gt; y &lt;optgroup&gt; para agrupar.</td></tr>
+
+          <tr><td class="num">32</td><td class="etq"><code>&lt;option&gt;</code></td><td class="desc">Elemento de opción dentro de &lt;select&gt;.</td><td class="ej"><code>&lt;option value="1"&gt;Uno&lt;/option&gt;</code></td><td class="ad">Atributo <code>selected</code> marca la opción por defecto.</td></tr>
+
+          <tr><td class="num">33</td><td class="etq"><code>&lt;optgroup&gt;</code></td><td class="desc">Agrupa opciones dentro de un &lt;select&gt;.</td><td class="ej"><code>&lt;optgroup label="Grupo 1"&gt;...&lt;/optgroup&gt;</code></td><td class="ad">Mejora usabilidad en listas largas.</td></tr>
+
+          <tr><td class="num">34</td><td class="etq"><code>&lt;fieldset&gt;</code></td><td class="desc">Agrupa campos del formulario visualmente.</td><td class="ej"><code>&lt;fieldset&gt;&lt;legend&gt;Datos&lt;/legend&gt;...&lt;/fieldset&gt;</code></td><td class="ad">Útil para accesibilidad y organización.</td></tr>
+
+          <tr><td class="num">35</td><td class="etq"><code>&lt;legend&gt;</code></td><td class="desc">Título para un &lt;fieldset&gt;.</td><td class="ej"><code>&lt;legend&gt;Información personal&lt;/legend&gt;</code></td><td class="ad">Debe estar dentro de &lt;fieldset&gt;.</td></tr>
+
+          <tr><td class="num">36</td><td class="etq"><code>&lt;iframe&gt;</code></td><td class="desc">Inserta otra página o recurso embebido dentro del documento.</td><td class="ej"><code>&lt;iframe src="mapa.html"&gt;&lt;/iframe&gt;</code></td><td class="ad">Atributos útiles: width, height, title (accesibilidad).</td></tr>
+
+          <tr><td class="num">37</td><td class="etq"><code>&lt;audio&gt;</code></td><td class="desc">Reproductor de audio nativo.</td><td class="ej"><code>&lt;audio controls src="cancion.mp3"&gt;&lt;/audio&gt;</code></td><td class="ad">Atributos: controls, autoplay, loop, preload.</td></tr>
+
+          <tr><td class="num">38</td><td class="etq"><code>&lt;video&gt;</code></td><td class="desc">Reproductor de vídeo nativo.</td><td class="ej"><code>&lt;video controls&gt;&lt;source src="v.mp4"&gt;&lt;/video&gt;</code></td><td class="ad">Soporta subtítulos con &lt;track&gt;.</td></tr>
+
+          <tr><td class="num">39</td><td class="etq"><code>&lt;source&gt;</code></td><td class="desc">Define una fuente alternativa para audio/video.</td><td class="ej"><code>&lt;source src="v.mp4" type="video/mp4"&gt;</code></td><td class="ad">Colocar varias para compatibilidad de formato.</td></tr>
+
+          <tr><td class="num">40</td><td class="etq"><code>&lt;track&gt;</code></td><td class="desc">Subtítulos o pistas para multimedia.</td><td class="ej"><code>&lt;track src="sub.vtt" kind="subtitles" srclang="es"&gt;</code></td><td class="ad">Mejora accesibilidad del contenido audiovisual.</td></tr>
+
+          <tr><td class="num">41</td><td class="etq"><code>&lt;canvas&gt;</code></td><td class="desc">Área para dibujar gráficos dinámicos mediante JavaScript.</td><td class="ej"><code>&lt;canvas id="c"&gt;&lt;/canvas&gt;</code></td><td class="ad">Necesita script para dibujar en 2D/3D.</td></tr>
+
+          <tr><td class="num">42</td><td class="etq"><code>&lt;svg&gt;</code></td><td class="desc">Contenedor para gráficos vectoriales SVG (escalables).</td><td class="ej"><code>&lt;svg width="100" height="100"&gt;&lt;circle cx="50" cy="50" r="40"/&gt;&lt;/svg&gt;</code></td><td class="ad">Escalable sin pérdida; se puede estilizar con CSS.</td></tr>
+
+          <tr><td class="num">43</td><td class="etq"><code>&lt;path&gt;</code></td><td class="desc">Elemento SVG para dibujar rutas complejas (curvas, líneas).</td><td class="ej"><code>&lt;path d="M150 0 L75 200 L225 200 Z"/&gt;</code></td><td class="ad">Parte de SVG; define la forma con 'd'.</td></tr>
+
+          <tr><td class="num">44</td><td class="etq"><code>&lt;link&gt;</code></td><td class="desc">Vincula recursos externos, como hojas de estilo (CSS) o iconos.</td><td class="ej"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td><td class="ad">Se coloca dentro de &lt;head&gt;.</td></tr>
+
+          <tr><td class="num">45</td><td class="etq"><code>&lt;style&gt;</code></td><td class="desc">Define estilos CSS en línea dentro del documento.</td><td class="ej"><code>&lt;style&gt;body{background:red;}&lt;/style&gt;</code></td><td class="ad">Mejor usar archivos externos para mantenimiento.</td></tr>
+
+          <tr><td class="num">46</td><td class="etq"><code>&lt;script&gt;</code></td><td class="desc">Inserta o referencia código JavaScript.</td><td class="ej"><code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></td><td class="ad">Si se coloca en &lt;head&gt;, usar defer o async para rendimiento.</td></tr>
+
+          <tr><td class="num">47</td><td class="etq"><code>&lt;noscript&gt;</code></td><td class="desc">Contenido alternativo mostrado cuando JavaScript está deshabilitado.</td><td class="ej"><code>&lt;noscript&gt;Activa JS para ver esta página&lt;/noscript&gt;</code></td><td class="ad">Útil para accesibilidad y SEO.</td></tr>
+
+          <tr><td class="num">48</td><td class="etq"><code>&lt;meta&gt;</code></td><td class="desc">Metadatos del documento (charset, description, viewport...).</td><td class="ej"><code>&lt;meta name="description" content="... "&gt;</code></td><td class="ad">Se coloca en &lt;head&gt;.</td></tr>
+
+          <tr><td class="num">49</td><td class="etq"><code>&lt;title&gt;</code></td><td class="desc">Título que aparece en la pestaña del navegador; importante para SEO.</td><td class="ej"><code>&lt;title&gt;Mi página&lt;/title&gt;</code></td><td class="ad">Visible en resultados de búsqueda.</td></tr>
+
+          <tr><td class="num">50</td><td class="etq"><code>&lt;base&gt;</code></td><td class="desc">Define la URL base para enlaces relativos.</td><td class="ej"><code>&lt;base href="https://example.com/"&gt;</code></td><td class="ad">Afecta a todos los enlaces relativos; usar con cuidado.</td></tr>
+
+          <!-- ******************
+               Grupo 3: Nº 51 - 75
+               Etiquetas semánticas y de texto enriquecido
+               ****************** -->
+
+          <tr><td class="num">51</td><td class="etq"><code>&lt;header&gt;</code></td><td class="desc">Sección de encabezado de la página o de una sección.</td><td class="ej"><code>&lt;header&gt;&lt;h1&gt;Bienvenido&lt;/h1&gt;&lt;/header&gt;</code></td><td class="ad">Suele incluir logo y navegación.</td></tr>
+
+          <tr><td class="num">52</td><td class="etq"><code>&lt;nav&gt;</code></td><td class="desc">Área que agrupa enlaces de navegación principales.</td><td class="ej"><code>&lt;nav&gt;&lt;a href='#'&gt;Inicio&lt;/a&gt;&lt;/nav&gt;</code></td><td class="ad">Ayuda a usuarios y a motores de búsqueda.</td></tr>
+
+          <tr><td class="num">53</td><td class="etq"><code>&lt;main&gt;</code></td><td class="desc">Contenedor del contenido principal de la página (solo uno por documento).</td><td class="ej"><code>&lt;main&gt;Contenido principal&lt;/main&gt;</code></td><td class="ad">Importante para accesibilidad (skip links).</td></tr>
+
+          <tr><td class="num">54</td><td class="etq"><code>&lt;section&gt;</code></td><td class="desc">Sección temática dentro del contenido.</td><td class="ej"><code>&lt;section&gt;&lt;h2&gt;Noticias&lt;/h2&gt;&lt;/section&gt;</code></td><td class="ad">Útil para dividir contenido por temas.</td></tr>
+
+          <tr><td class="num">55</td><td class="etq"><code>&lt;article&gt;</code></td><td class="desc">Contenido independiente que puede distribuirse por separado (post, noticia).</td><td class="ej"><code>&lt;article&gt;&lt;h2&gt;Post&lt;/h2&gt;&lt;/article&gt;</code></td><td class="ad">Ideal para entradas de blog.</td></tr>
+
+          <tr><td class="num">56</td><td class="etq"><code>&lt;aside&gt;</code></td><td class="desc">Contenido complementario (barra lateral, notas, anuncios).</td><td class="ej"><code>&lt;aside&gt;Enlaces relacionados&lt;/aside&gt;</code></td><td class="ad">No es el contenido principal.</td></tr>
+
+          <tr><td class="num">57</td><td class="etq"><code>&lt;footer&gt;</code></td><td class="desc">Pie de página con información de contacto y créditos.</td><td class="ej"><code>&lt;footer&gt;&amp;copy; 2025&lt;/footer&gt;</code></td><td class="ad">Frecuentemente contiene &lt;address&gt;.</td></tr>
+
+          <tr><td class="num">58</td><td class="etq"><code>&lt;address&gt;</code></td><td class="desc">Información de contacto (dirección, email).</td><td class="ej"><code>&lt;address&gt;contacto@ejemplo.com&lt;/address&gt;</code></td><td class="ad">Usar dentro de &lt;footer&gt; o similar.</td></tr>
+
+          <tr><td class="num">59</td><td class="etq"><code>&lt;figure&gt;</code></td><td class="desc">Contenedor para medios (imagen, gráfico) con leyenda.</td><td class="ej"><code>&lt;figure&gt;&lt;img src='f.jpg'&gt;&lt;figcaption&gt;Leyenda&lt;/figcaption&gt;&lt;/figure&gt;</code></td><td class="ad">Usar con &lt;figcaption&gt; para describir la imagen.</td></tr>
+
+          <tr><td class="num">60</td><td class="etq"><code>&lt;figcaption&gt;</code></td><td class="desc">Leyenda o pie para la figura.</td><td class="ej"><code>&lt;figcaption&gt;Descripción&lt;/figcaption&gt;</code></td><td class="ad">Debe estar dentro de &lt;figure&gt;.</td></tr>
+
+          <tr><td class="num">61</td><td class="etq"><code>&lt;mark&gt;</code></td><td class="desc">Resalta texto (por ejemplo búsqueda).</td><td class="ej"><code>&lt;mark&gt;Resultado&lt;/mark&gt;</code></td><td class="ad">Color por defecto: amarillo.</td></tr>
+
+          <tr><td class="num">62</td><td class="etq"><code>&lt;time&gt;</code></td><td class="desc">Representa fecha y/o hora en formato legible y máquina.</td><td class="ej"><code>&lt;time datetime="2025-09-15"&gt;15 Sep 2025&lt;/time&gt;</code></td><td class="ad">Usar atributo <code>datetime</code> para datos legibles por máquinas.</td></tr>
+
+          <tr><td class="num">63</td><td class="etq"><code>&lt;abbr&gt;</code></td><td class="desc">Abreviatura o sigla con su expansión en title.</td><td class="ej"><code>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></td><td class="ad">Muestra el significado al pasar el cursor.</td></tr>
+
+          <tr><td class="num">64</td><td class="etq"><code>&lt;code&gt;</code></td><td class="desc">Fragmento de código en línea (monoespaciado).</td><td class="ej"><code>&lt;code&gt;console.log('Hola')&lt;/code&gt;</code></td><td class="ad">Ideal para ejemplos de programación.</td></tr>
+
+          <tr><td class="num">65</td><td class="etq"><code>&lt;pre&gt;</code></td><td class="desc">Texto preformateado (mantiene espacios y saltos).</td><td class="ej"><code>&lt;pre&gt;  indented text&lt;/pre&gt;</code></td><td class="ad">Útil para mostrar código con formato.</td></tr>
+
+          <tr><td class="num">66</td><td class="etq"><code>&lt;kbd&gt;</code></td><td class="desc">Indica entrada de teclado (teclas o atajos).</td><td class="ej"><code>&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;</code></td><td class="ad">Usado en documentación de atajos.</td></tr>
+
+          <tr><td class="num">67</td><td class="etq"><code>&lt;samp&gt;</code></td><td class="desc">Salida de un programa o comando (ej. consola).</td><td class="ej"><code>&lt;samp&gt;Error: 404&lt;/samp&gt;</code></td><td class="ad">Semántica para salidas de sistemas.</td></tr>
+
+          <tr><td class="num">68</td><td class="etq"><code>&lt;var&gt;</code></td><td class="desc">Representa una variable (en matemáticas/código).</td><td class="ej"><code>&lt;var&gt;x&lt;/var&gt; = 10</code></td><td class="ad">Monoespaciado por defecto en algunos navegadores.</td></tr>
+
+          <tr><td class="num">69</td><td class="etq"><code>&lt;small&gt;</code></td><td class="desc">Texto de tamaño reducido; notas o disclaimers.</td><td class="ej"><code>&lt;small&gt;Nota al pie&lt;/small&gt;</code></td><td class="ad">No usar para contenido importante.</td></tr>
+
+          <tr><td class="num">70</td><td class="etq"><code>&lt;sup&gt;</code></td><td class="desc">Superíndice (p. ej. potencias).</td><td class="ej"><code>x&lt;sup&gt;2&lt;/sup&gt;</code></td><td class="ad">Útil en fórmulas matemáticas.</td></tr>
+
+          <tr><td class="num">71</td><td class="etq"><code>&lt;sub&gt;</code></td><td class="desc">Subíndice (p. ej. fórmulas químicas).</td><td class="ej"><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td><td class="ad">Usado en notación científica/química.</td></tr>
+
+          <tr><td class="num">72</td><td class="etq"><code>&lt;b&gt;</code></td><td class="desc">Texto en negrita sin significado semántico adicional.</td><td class="ej"><code>&lt;b&gt;Negrita&lt;/b&gt;</code></td><td class="ad">Preferir &lt;strong&gt; para indicar importancia.</td></tr>
+
+          <tr><td class="num">73</td><td class="etq"><code>&lt;i&gt;</code></td><td class="desc">Texto en cursiva sin énfasis semántico.</td><td class="ej"><code>&lt;i&gt;Cursiva&lt;/i&gt;</code></td><td class="ad">Preferir &lt;em&gt; para énfasis.</td></tr>
+
+          <tr><td class="num">74</td><td class="etq"><code>&lt;u&gt;</code></td><td class="desc">Subraya texto.</td><td class="ej"><code>&lt;u&gt;Subrayado&lt;/u&gt;</code></td><td class="ad">Evitar confundir con enlaces; usar con moderación.</td></tr>
+
+          <tr><td class="num">75</td><td class="etq"><code>&lt;del&gt;</code></td><td class="desc">Indica texto eliminado (tachado).</td><td class="ej"><code>&lt;del&gt;Texto viejo&lt;/del&gt;</code></td><td class="ad">Útil para mostrar ediciones o cambios.</td></tr>
+
+          <!-- ******************
+               Grupo 4: Nº 76 - 102
+               Etiquetas avanzadas / de capa moderna
+               ****************** -->
+
+          <tr><td class="num">76</td><td class="etq"><code>&lt;ins&gt;</code></td><td class="desc">Texto insertado (opuesto de &lt;del&gt;).</td><td class="ej"><code>&lt;ins&gt;Nuevo texto&lt;/ins&gt;</code></td><td class="ad">Puede estilizarse para mostrar actualizaciones.</td></tr>
+
+          <tr><td class="num">77</td><td class="etq"><code>&lt;q&gt;</code></td><td class="desc">Cita corta en línea (automáticamente añade comillas en algunos navegadores).</td><td class="ej"><code>&lt;q&gt;El saber es poder&lt;/q&gt;</code></td><td class="ad">Para citas breves en texto corriente.</td></tr>
+
+          <tr><td class="num">78</td><td class="etq"><code>&lt;blockquote&gt;</code></td><td class="desc">Cita en bloque para textos más largos.</td><td class="ej"><code>&lt;blockquote&gt;Texto citado...&lt;/blockquote&gt;</code></td><td class="ad">Suele renderizarse con sangría.</td></tr>
+
+          <tr><td class="num">79</td><td class="etq"><code>&lt;cite&gt;</code></td><td class="desc">Referencia a una obra (libro, artículo, etc.).</td><td class="ej"><code>&lt;cite&gt;Don Quijote&lt;/cite&gt;</code></td><td class="ad">Normalmente en cursiva.</td></tr>
+
+          <tr><td class="num">80</td><td class="etq"><code>&lt;bdi&gt;</code></td><td class="desc">Aíslax texto con dirección independiente (bidireccionalidad).</td><td class="ej"><code>&lt;bdi&gt;العربية&lt;/bdi&gt;</code></td><td class="ad">Útil al mezclar idiomas con direcciones distintas.</td></tr>
+
+          <tr><td class="num">81</td><td class="etq"><code>&lt;bdo&gt;</code></td><td class="desc">Sobrescribe la dirección del texto (dir='rtl'|'ltr').</td><td class="ej"><code>&lt;bdo dir="rtl"&gt;Texto&lt;/bdo&gt;</code></td><td class="ad">Forzar orden de lectura cuando sea necesario.</td></tr>
+
+          <tr><td class="num">82</td><td class="etq"><code>&lt;wbr&gt;</code></td><td class="desc">Punto opcional de quiebre de palabra (word break).</td><td class="ej"><code>hiper&lt;wbr&gt;texto</code></td><td class="ad">No visible, ayuda en palabras largas.</td></tr>
+
+          <tr><td class="num">83</td><td class="etq"><code>&lt;details&gt;</code></td><td class="desc">Contenedor desplegable; se puede abrir/colapsar.</td><td class="ej"><code>&lt;details&gt;&lt;summary&gt;Más info&lt;/summary&gt;&lt;p&gt;Contenido oculto&lt;/p&gt;&lt;/details&gt;</code></td><td class="ad">Útil para FAQ y contenido colapsable.</td></tr>
+
+          <tr><td class="num">84</td><td class="etq"><code>&lt;summary&gt;</code></td><td class="desc">Encabezado clicable de &lt;details&gt;.</td><td class="ej"><code>&lt;summary&gt;Haz clic&lt;/summary&gt;</code></td><td class="ad">Debe estar directamente dentro de &lt;details&gt;.</td></tr>
+
+          <tr><td class="num">85</td><td class="etq"><code>&lt;dialog&gt;</code></td><td class="desc">Cuadro de diálogo/modal nativo del navegador.</td><td class="ej"><code>&lt;dialog open&gt;Hola&lt;/dialog&gt;</code></td><td class="ad">Funcionalidad limitada en algunos navegadores; se usa con JS para control.</td></tr>
+
+          <tr><td class="num">86</td><td class="etq"><code>&lt;menu&gt;</code></td><td class="desc">Lista de comandos o menú; su uso ha variado con el tiempo.</td><td class="ej"><code>&lt;menu&gt;&lt;li&gt;Opción&lt;/li&gt;&lt;/menu&gt;</code></td><td class="ad">En HTML5 su uso es menos común; reemplazado por &lt;ul&gt; habitualmente.</td></tr>
+
+          <tr><td class="num">87</td><td class="etq"><code>&lt;menuitem&gt;</code></td><td class="desc">Elemento de menú contextual (obsoleto en HTML5).</td><td class="ej"><code>&lt;menuitem label="Guardar"&gt;&lt;/menuitem&gt;</code></td><td class="ad">No recomendable: soporte limitado/obsoleto.</td></tr>
+
+          <tr><td class="num">88</td><td class="etq"><code>&lt;progress&gt;</code></td><td class="desc">Barra de progreso que muestra avance de una tarea.</td><td class="ej"><code>&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</code></td><td class="ad">Ideal para progresos de carga.</td></tr>
+
+          <tr><td class="num">89</td><td class="etq"><code>&lt;meter&gt;</code></td><td class="desc">Representa un valor dentro de un rango (ej. nivel, ratio).</td><td class="ej"><code>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code></td><td class="ad">Diferente semánticamente de &lt;progress&gt;.</td></tr>
+
+          <tr><td class="num">90</td><td class="etq"><code>&lt;output&gt;</code></td><td class="desc">Elemento para mostrar el resultado de cálculos en formularios.</td><td class="ej"><code>&lt;output name="res"&gt;42&lt;/output&gt;</code></td><td class="ad">Puede usarse con JS o con atributos form-associated.</td></tr>
+
+          <tr><td class="num">91</td><td class="etq"><code>&lt;template&gt;</code></td><td class="desc">Contenedor de contenido no renderizado hasta que se instancia con JS.</td><td class="ej"><code>&lt;template&gt;&lt;div&gt;Plantilla&lt;/div&gt;&lt;/template&gt;</code></td><td class="ad">Perfecto para clones dinámicos con JS.</td></tr>
+
+          <tr><td class="num">92</td><td class="etq"><code>&lt;slot&gt;</code></td><td class="desc">Punto de inserción en Web Components (Shadow DOM).</td><td class="ej"><code>&lt;slot&gt;Contenido por defecto&lt;/slot&gt;</code></td><td class="ad">Solo en componentes web; no para HTML clásico.</td></tr>
+
+          <tr><td class="num">93</td><td class="etq"><code>&lt;picture&gt;</code></td><td class="desc">Contenedor para imágenes adaptables (responsive, formatos).</td><td class="ej"><code>&lt;picture&gt;&lt;source srcset="img.webp" type="image/webp"&gt;&lt;img src="img.jpg" alt="X"&gt;&lt;/picture&gt;</code></td><td class="ad">Permite servir WebP, AVIF, etc. según soporte del navegador.</td></tr>
+
+          <tr><td class="num">94</td><td class="etq"><code>&lt;object&gt;</code></td><td class="desc">Inserta recursos externos (PDF, applet, etc.).</td><td class="ej"><code>&lt;object data="archivo.pdf" type="application/pdf"&gt;&lt;/object&gt;</code></td><td class="ad">Puede usar &lt;param&gt; para opciones.</td></tr>
+
+          <tr><td class="num">95</td><td class="etq"><code>&lt;embed&gt;</code></td><td class="desc">Inserta contenido externo embebible.</td><td class="ej"><code>&lt;embed src="anim.swf"&gt;</code></td><td class="ad">Uso reducido modernamente (plugins obsoletos).</td></tr>
+
+          <tr><td class="num">96</td><td class="etq"><code>&lt;param&gt;</code></td><td class="desc">Define parámetros para &lt;object&gt;.</td><td class="ej"><code>&lt;param name="autoplay" value="true"&gt;</code></td><td class="ad">Acompaña a &lt;object&gt; para pasar opciones.</td></tr>
+
+          <tr><td class="num">97</td><td class="etq"><code>&lt;col&gt;</code></td><td class="desc">Define propiedades de una columna en tablas.</td><td class="ej"><code>&lt;col span="2"&gt;</code></td><td class="ad">Se usa dentro de &lt;colgroup&gt; para estilo.</td></tr>
+
+          <tr><td class="num">98</td><td class="etq"><code>&lt;colgroup&gt;</code></td><td class="desc">Agrupa columnas en una tabla para aplicar estilos.</td><td class="ej"><code>&lt;colgroup&gt;&lt;col&gt;&lt;/colgroup&gt;</code></td><td class="ad">Útil para diseño de tablas complejas.</td></tr>
+
+          <tr><td class="num">99</td><td class="etq"><code>&lt;dl&gt;</code></td><td class="desc">Lista de definiciones (término + definición).</td><td class="ej"><code>&lt;dl&gt;&lt;dt&gt;Término&lt;/dt&gt;&lt;dd&gt;Definición&lt;/dd&gt;&lt;/dl&gt;</code></td><td class="ad">Semántica adecuada para glosarios.</td></tr>
+
+          <tr><td class="num">100</td><td class="etq"><code>&lt;dt&gt;</code></td><td class="desc">Término en una lista de definiciones (&lt;dl&gt;).</td><td class="ej"><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td><td class="ad">Siempre en contexto de &lt;dl&gt;.</td></tr>
+
+          <tr><td class="num">101</td><td class="etq"><code>&lt;dd&gt;</code></td><td class="desc">Definición de un término (&lt;dt&gt;).</td><td class="ej"><code>&lt;dd&gt;Lenguaje de marcado&lt;/dd&gt;</code></td><td class="ad">Complementa &lt;dt&gt; en &lt;dl&gt;.</td></tr>
+
+          <tr><td class="num">102</td><td class="etq"><code>&lt;html&gt;</code></td><td class="desc">Elemento raíz del documento HTML; contiene &lt;head&gt; y &lt;body&gt;.</td><td class="ej"><code>&lt;html lang="es"&gt;...&lt;/html&gt;</code></td><td class="ad">Atributo <code>lang</code> mejora accesibilidad y SEO.</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FOOTER: créditos -->
+    <footer class="page-footer" role="contentinfo">
+      <!--
+        Explicación/cierre dentro del documento:
+        He incluido comentarios explicativos arriba y agrupé las etiquetas por bloques
+        para que puedas presentar la tabla y explicar cada parte sin salir del archivo.
+        Si quieres, puedo convertir esto en PDF o en un documento .docx listo para
+        imprimir.
+      -->
+      <div>Documento: Listado de 102 etiquetas HTML .</div>
+      <div style="font-size:0.85rem; color:var(--muted); margin-top:6px;">Randy Garcia Olivo / 100533464 </div>
+    </footer>
+
+  </div>
+</body>
+</html>
