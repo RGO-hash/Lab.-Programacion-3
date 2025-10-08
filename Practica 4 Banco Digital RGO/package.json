@@ -1,0 +1,98 @@
+{
+  "name": "banco-suarez-website",
+  "version": "1.0.0",
+  "description": "Sitio web profesional del Banco Suarez - Proyecto académico desarrollado por Arowarlin Suarez",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=index.html",
+    "dev": "live-server --port=3000 --open=index.html --watch=css,js",
+    "build": "echo 'Proyecto listo para producción' && npm run validate",
+    "validate": "echo 'Validando HTML, CSS y JS...' && npm run validate-html && npm run validate-css && npm run validate-js",
+    "validate-html": "echo 'Validando HTML...'",
+    "validate-css": "echo 'Validando CSS...'",
+    "validate-js": "echo 'Validando JavaScript...'",
+    "deploy": "echo 'Desplegando a GitHub Pages...'",
+    "test": "echo 'Ejecutando tests...' && npm run validate",
+    "clean": "echo 'Limpiando archivos temporales...'",
+    "docs": "echo 'Generando documentación...'",
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html"
+  },
+  "keywords": [
+    "banco",
+    "suarez",
+    "banking",
+    "website",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "academic-project",
+    "computer-science",
+    "web-development",
+    "frontend",
+    "arowarlin-suarez",
+    "dominican-republic"
+  ],
+  "author": {
+    "name": "Arowarlin Suarez",
+    "email": "arowarlinsuarez@gmail.com",
+    "url": "https://github.com/Arowarlin",
+    "age": 21,
+    "role": "Computer Science Student",
+    "institution": "Universidad [Nombre de tu universidad]"
+  },
+  "license": "MIT",
+  "homepage": "https://arowarlin.github.io/banco-suarez-website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arowarlin/banco-suarez-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arowarlin/banco-suarez-website/issues",
+    "email": "arowarlinsuarez@gmail.com"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "lighthouse": "^9.6.8"
+  },
+  "config": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/Arowarlin"
+  },
+  "academic": {
+    "project": "Banco Suarez Banking Website",
+    "developer": "Arowarlin Suarez",
+    "age": 21,
+    "degree": "Licenciatura en Informática",
+    "year": 2025,
+    "purpose": "Academic demonstration of web development skills",
+    "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "Responsive Design"],
+    "features": [
+      "Dynamic navigation system",
+      "Responsive design",
+      "Interactive animations",
+      "Banking service content",
+      "Professional UI/UX"
+    ]
+  },
+  "contact": {
+    "phone": "(809) 210-2490",
+    "email": "arowarlinsuarez@gmail.com",
+    "github": "https://github.com/Arowarlin",
+    "location": "Santo Domingo, República Dominicana"
+  }
+}

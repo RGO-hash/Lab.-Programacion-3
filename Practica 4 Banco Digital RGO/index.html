@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco RGO - Tu Futuro Financiero</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="loading">
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo" onclick="showContent('conoce-mas')">Banco RGO</div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cuentas</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('cuenta-ahorro')">💰 Cuenta de Ahorro</div>
+                            <div class="dropdown-item" onclick="showContent('cuenta-corriente')">🏦 Cuenta Corriente</div>
+                            <div class="dropdown-item" onclick="showContent('cuenta-nomina')">💼 Cuenta Nómina</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inversiones</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('fondos-inversion')">📈 Fondos de Inversión</div>
+                            <div class="dropdown-item" onclick="showContent('certificados')">📜 Certificados</div>
+                            <div class="dropdown-item" onclick="showContent('mercado-valores')">📊 Mercado de Valores</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Préstamos</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('prestamo-personal')">👤 Préstamo Personal</div>
+                            <div class="dropdown-item" onclick="showContent('prestamo-vehiculo')">🚗 Préstamo de Vehículo</div>
+                            <div class="dropdown-item" onclick="showContent('prestamo-hipotecario')">🏠 Préstamo Hipotecario</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Seguros</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('seguro-vida')">❤️ Seguro de Vida</div>
+                            <div class="dropdown-item" onclick="showContent('seguro-auto')">🚙 Seguro de Auto</div>
+                            <div class="dropdown-item" onclick="showContent('seguro-hogar')">🏡 Seguro de Hogar</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Servicios</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('banca-digital')">📱 Banca Digital</div>
+                            <div class="dropdown-item" onclick="showContent('cajeros')">🏧 Cajeros Automáticos</div>
+                            <div class="dropdown-item" onclick="showContent('transferencias')">💸 Transferencias</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Acerca de</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item" onclick="showContent('sobre-Randy G.')">👨‍💻 Sobre el Desarrollador</div>
+                            <div class="dropdown-item" onclick="showContent('proyecto-academico')">🎓 Proyecto Académico</div>
+                            <div class="dropdown-item" onclick="showContent('tecnologias')">⚙️ Tecnologías Utilizadas</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Banco RGO - Tu Futuro Financiero Comienza Aquí</h1>
+            <p>Descubre una nueva forma de hacer banca digital con tecnología avanzada y atención personalizada</p>
+            <a href="#" class="cta-button" onclick="showContent('conoce-mas')">Conoce Más</a>
+        </div>
+    </section>
+
+    <div class="content-container">
+        <div class="container">
+            <!-- Contenido Principal -->
+            <div id="content-conoce-mas" class="content-display active">
+                <h2>🏦 Bienvenido a Banco RGO</h2>
+                <p>Somos más que un banco, somos tu socio financiero de confianza. Con tecnología de vanguardia y un enfoque innovador, Banco RGO se ha posicionado como la institución líder en soluciones financieras digitales para miles de familias y empresas dominicanas.</p>
+                <h3>🌟 ¿Por qué elegir Banco RGO?</h3>
+                <ul class="features-list">
+                    <li>Tecnología de vanguardia desarrollada con los más altos estándares</li>
+                    <li>Atención al cliente personalizada 24/7 los 365 días del año</li>
+                    <li>Red de más de 150 sucursales estratégicamente ubicadas</li>
+                    <li>Productos innovadores con las tasas más competitivas del mercado</li>
+                    <li>Respaldo de solidez financiera y transparencia total</li>
+                    <li>Plataforma digital premiada por su innovación y seguridad</li>
+                </ul>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 10px; border-left: 4px solid #46aa78;">
+                    <h4>💡 Innovación y Excelencia</h4>
+                    <p>Banco RGO representa la fusión perfecta entre tradición bancaria y innovación tecnológica, ofreciendo soluciones financieras que se adaptan a las necesidades del siglo XXI.</p>
+                </div>
+            </div>
+
+            <!-- Nueva Sección: Sobre el Desarrollador -->
+            <div id="content-sobre-Randy G." class="content-display">
+                <h2>👨‍💻 Randy G. RGO - Desarrollador</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: center; margin: 2rem 0;">
+                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #4d67da, #911818); color: white; border-radius: 15px;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">👨‍💻</div>
+                        <h3>Randy G. RGO</h3>
+                        <p style="margin: 0.5rem 0;">24 años</p>
+                        <p style="margin: 0;">Estudiante de Informática</p>
+                    </div>
+                    <div>
+                        <h3>🎓 Perfil Profesional</h3>
+                        <ul class="features-list">
+                            <li><strong>Edad:</strong> 24 años</li>
+                            <li><strong>Carrera:</strong> Licenciatura en Informática</li>
+                            <li><strong>Especialización:</strong> Desarrollo Web y Tecnologías Digitales</li>
+                            <li><strong>Enfoque:</strong> Soluciones tecnológicas innovadoras</li>
+                            <li><strong>Pasión:</strong> Crear experiencias digitales excepcionales</li>
+                            <li><strong>Visión:</strong> Transformar ideas en realidades digitales</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>🚀 Filosofía de Desarrollo</h3>
+                <p>Como estudiante de informática apasionado por la tecnología, mi enfoque se centra en crear soluciones web modernas, funcionales y estéticamente atractivas. Cada línea de código que escribo está pensada para ofrecer la mejor experiencia de usuario posible.</p>
+                
+                <h3>💼 Competencias Técnicas</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 3px solid #4ECDC4;">
+                        <h4>🌐 Frontend</h4>
+                        <p>HTML5, CSS3, JavaScript ES6+, Responsive Design, UX/UI</p>
+                    </div>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 3px solid #FF6B6B;">
+                        <h4>🎨 Design</h4>
+                        <p>Diseño web moderno, animaciones CSS, interfaces intuitivas</p>
+                    </div>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 3px solid #45B7D1;">
+                        <h4>⚡ Performance</h4>
+                        <p>Optimización web, código limpio, mejores prácticas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nueva Sección: Proyecto Académico -->
+            <div id="content-proyecto-academico" class="content-display">
+                <h2>🎓 Proyecto Académico - Banco RGO</h2>
+                <p>Este proyecto representa la culminación de conocimientos adquiridos en la Licenciatura en Informática, demostrando competencias en desarrollo web, diseño de interfaces y programación funcional.</p>
+                
+                <h3>📋 Objetivos del Proyecto</h3>
+                <ul class="features-list">
+                    <li>Demostrar dominio de tecnologías web fundamentales (HTML5, CSS3, JavaScript)</li>
+                    <li>Implementar arquitectura de navegación inspirada en sitios bancarios profesionales</li>
+                    <li>Crear una experiencia de usuario intuitiva y moderna</li>
+                    <li>Desarrollar contenido original y estructurado para servicios financieros</li>
+                    <li>Aplicar principios de responsive design para múltiples dispositivos</li>
+                    <li>Integrar animaciones y efectos visuales profesionales</li>
+                </ul>
+
+                <h3>🎯 Metodología de Desarrollo</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div style="padding: 1.5rem; border: 1px solid #e9ecef; border-radius: 10px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4>1️⃣ Análisis e Investigación</h4>
+                        <p>Estudio de la arquitectura web de Banreservas como referencia, análisis de mejores prácticas en UX bancario.</p>
+                    </div>
+                    <div style="padding: 1.5rem; border: 1px solid #e9ecef; border-radius: 10px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4>2️⃣ Diseño y Planificación</h4>
+                        <p>Creación de wireframes, definición de paleta de colores, estructura de navegación y contenido.</p>
+                    </div>
+                    <div style="padding: 1.5rem; border: 1px solid #e9ecef; border-radius: 10px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4>3️⃣ Desarrollo Frontend</h4>
+                        <p>Implementación con HTML semántico, CSS moderno con Flexbox/Grid, JavaScript funcional.</p>
+                    </div>
+                    <div style="padding: 1.5rem; border: 1px solid #e9ecef; border-radius: 10px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4>4️⃣ Testing y Optimización</h4>
+                        <p>Pruebas de responsividad, optimización de rendimiento, validación de código.</p>
+                    </div>
+                </div>
+
+                <h3>🏆 Logros del Proyecto</h3>
+                <ul class="features-list">
+                    <li>Sitio web 100% funcional con navegación dinámica</li>
+                    <li>Diseño responsive perfecto en todos los dispositivos</li>
+                    <li>Código limpio y bien estructurado siguiendo mejores prácticas</li>
+                    <li>15+ secciones de contenido financiero detallado</li>
+                    <li>Implementación de efectos visuales y animaciones profesionales</li>
+                    <li>Arquitectura escalable para futuras mejoras</li>
+                </ul>
+            </div>
+
+            <!-- Nueva Sección: Tecnologías -->
+            <div id="content-tecnologias" class="content-display">
+                <h2>⚙️ Tecnologías y Herramientas Utilizadas</h2>
+                <p>Banco RGO ha sido desarrollado utilizando tecnologías web modernas y estándares de la industria, garantizando un producto de alta calidad y rendimiento óptimo.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div style="padding: 2rem; background: linear-gradient(135deg, #FF6B6B, #ee5a52); color: white; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌐</div>
+                        <h3>HTML5</h3>
+                        <p>Estructura semántica moderna, elementos accesibles, marcado limpio y optimizado para SEO.</p>
+                    </div>
+                    <div style="padding: 2rem; background: linear-gradient(135deg, #4ECDC4, #44a08d); color: white; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                        <h3>CSS3</h3>
+                        <p>Flexbox, Grid Layout, animaciones CSS, gradientes, responsive design con mobile-first approach.</p>
+                    </div>
+                    <div style="padding: 2rem; background: linear-gradient(135deg, #45B7D1, #2496F3); color: white; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                        <h3>JavaScript ES6+</h3>
+                        <p>Manipulación DOM, event listeners, funciones modernas, programación orientada a objetos.</p>
+                    </div>
+                </div>
+
+                <h3>🛠️ Herramientas de Desarrollo</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4>💻 Entorno de Desarrollo</h4>
+                        <ul class="features-list">
+                            <li>Visual Studio Code como editor principal</li>
+                            <li>Live Server para testing en tiempo real</li>
+                            <li>DevTools de Chrome para debugging</li>
+                            <li>Git para control de versiones</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>🌐 Deployment y Hosting</h4>
+                        <ul class="features-list">
+                            <li>GitHub para repositorio de código</li>
+                            <li>GitHub Pages para hosting gratuito</li>
+                            <li>Optimización para múltiples navegadores</li>
+                            <li>Testing en dispositivos móviles reales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📊 Características Técnicas Avanzadas</h3>
+                <ul class="features-list">
+                    <li><strong>Responsive Design:</strong> Adaptable desde 320px hasta 4K</li>
+                    <li><strong>Performance:</strong> Carga rápida con imágenes optimizadas</li>
+                    <li><strong>Accesibilidad:</strong> Navegación por teclado, lectores de pantalla</li>
+                    <li><strong>SEO Friendly:</strong> Meta tags optimizados, estructura semántica</li>
+                    <li><strong>Cross-Browser:</strong> Compatible con Chrome, Firefox, Safari, Edge</li>
+                    <li><strong>Progressive Enhancement:</strong> Funciona sin JavaScript como base</li>
+                </ul>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border: 1px solid #dee2e6;">
+                    <h4>💡 Innovaciones Implementadas</h4>
+                    <p>El proyecto incluye características avanzadas como scroll indicator, parallax effects, intersection observer para animaciones, preloader personalizado, y un easter egg con código Konami para demostrar creatividad en la programación.</p>
+                </div>
+            </div>
+
+            <!-- Resto del contenido original adaptado -->
+            <div id="content-cuenta-ahorro" class="content-display">
+                <h2>💰 Cuenta de Ahorro RGO Plus</h2>
+                <p>Nuestra cuenta estrella del Banco RGO te ofrece la mejor tasa del mercado con la flexibilidad que necesitas. Diseñada especialmente para quienes buscan hacer crecer su dinero de manera segura y eficiente.</p>
+                <h3>✨ Características principales:</h3>
+                <ul class="features-list">
+                    <li>Tasa de interés: 7.5% anual (la más alta del mercado)</li>
+                    <li>Apertura desde RD$500 pesos</li>
+                    <li>Sin límite de transacciones mensuales</li>
+                    <li>Banca móvil y online gratuita</li>
+                    <li>Tarjeta de débito Visa sin costo anual</li>
+                    <li>Seguro de vida gratuito hasta RD$500,000</li>
+                </ul>
+                <p><strong>¡Promoción especial Banco RGO:</strong> Abre tu cuenta este mes y recibe RD$500 de regalo más 2 meses sin comisiones.</p>
+            </div>
+
+            <div id="content-cuenta-corriente" class="content-display">
+                <h2>🏦 Cuenta Corriente RGO Premium</h2>
+                <p>La cuenta corriente ideal para profesionales y empresarios que necesitan flexibilidad total en sus operaciones financieras diarias. Con beneficios exclusivos del Banco RGO.</p>
+                <h3>🎯 Beneficios exclusivos:</h3>
+                <ul class="features-list">
+                    <li>Chequera de 50 cheques totalmente gratuita</li>
+                    <li>Línea de crédito automática hasta RD$200,000</li>
+                    <li>Asesor financiero personal asignado</li>
+                    <li>Descuentos del 15% en establecimientos aliados</li>
+                    <li>Acceso VIP a salas lounge en aeropuertos</li>
+                    <li>Estados de cuenta digitales ecológicos</li>
+                </ul>
+            </div>
+
+            <div id="content-cuenta-nomina" class="content-display">
+                <h2>💼 Cuenta Nómina Empresarial RGO</h2>
+                <p>Facilita el pago de nómina de tu empresa con nuestra cuenta especializada del Banco RGO. Proceso automatizado, reportes detallados y beneficios para tus empleados.</p>
+                <h3>🏢 Ventajas para tu empresa:</h3>
+                <ul class="features-list">
+                    <li>Procesamiento automático de nóminas</li>
+                    <li>Reportes detallados y personalizables</li>
+                    <li>API para integración con sistemas contables</li>
+                    <li>Soporte técnico especializado 24/7</li>
+                    <li>Tarjetas de débito gratuitas para empleados</li>
+                    <li>Préstamos preferenciales para colaboradores</li>
+                </ul>
+            </div>
+
+            <!-- Inversiones -->
+            <div id="content-fondos-inversion" class="content-display">
+                <h2>📈 Fondos de Inversión RGO</h2>
+                <p>Multiplica tu patrimonio con nuestros fondos de inversión del Banco RGO, gestionados por expertos. Diversifica tu portafolio y obtén rendimientos superiores al mercado tradicional.</p>
+                <h3>💎 Opciones de inversión:</h3>
+                <ul class="features-list">
+                    <li>Fondo RGO Conservador: 10% anual promedio (bajo riesgo)</li>
+                    <li>Fondo RGO Moderado: 30% anual promedio (riesgo medio)</li>
+                    <li>Fondo RGO Agresivo: 50% anual promedio (alto rendimiento)</li>
+                    <li>Inversión mínima: RD$5,000 pesos</li>
+                    <li>Retiros parciales sin penalización</li>
+                    <li>Reportes mensuales de rendimiento</li>
+                </ul>
+            </div>
+
+            <div id="content-certificados" class="content-display">
+                <h2>📜 Certificados de Depósito RGO</h2>
+                <p>Invierte con la máxima seguridad en nuestros certificados de depósito del Banco RGO. Rendimientos garantizados y capital protegido al 100%.</p>
+                <h3>🔒 Opciones disponibles:</h3>
+                <ul class="features-list">
+                    <li>3 meses: 8.5% anual</li>
+                    <li>6 meses: 11.5% anual</li>
+                    <li>12 meses: 12% anual</li>
+                    <li>24 meses: 15% anual</li>
+                    <li>Renovación automática opcional</li>
+                    <li>Intereses pagaderos mensualmente</li>
+                </ul>
+            </div>
+
+            <div id="content-mercado-valores" class="content-display">
+                <h2>📊 Trading RGO - Mercado de Valores</h2>
+                <p>Accede al mercado de valores dominicano e internacional con nuestra plataforma de trading avanzada del Banco RGO. Invierte en acciones, bonos y ETFs con las mejores herramientas.</p>
+                <h3>🚀 Herramientas profesionales:</h3>
+                <ul class="features-list">
+                    <li>Plataforma de trading RGO Pro</li>
+                    <li>Análisis técnico en tiempo real</li>
+                    <li>Acceso a mercados internacionales</li>
+                    <li>Asesoría de analistas financieros RGO</li>
+                    <li>Comisiones competitivas desde 0.45%</li>
+                    <li>App móvil RGO Trading</li>
+                </ul>
+            </div>
+
+            <!-- Préstamos -->
+            <div id="content-prestamo-personal" class="content-display">
+                <h2>👤 Préstamo Personal RGO Express</h2>
+                <p>Obtén el dinero que necesitas en 24 horas con nuestro préstamo personal del Banco RGO. Proceso 100% digital, requisitos mínimos y de respuesta inmediata.</p>
+                <h3>⚡ Características:</h3>
+                <ul class="features-list">
+                    <li>Hasta RD$2,500,000 pesos disponibles</li>
+                    <li>Tasas RGO desde 14.5% anual</li>
+                    <li>Plazo hasta 95 meses</li>
+                    <li>Aprobación en menos de 2 horas</li>
+                    <li>Sin garantía hipotecaria requerida</li>
+                    <li>Pagos flexibles adaptados a tus ingresos</li>
+                </ul>
+            </div>
+
+            <div id="content-prestamo-vehiculo" class="content-display">
+                <h2>🚗 Financiamiento de Vehículos RGO</h2>
+                <p>Estrena el vehículo de tus sueños con nuestro financiamiento especializado del Banco RGO. Cubres hasta el 80% del valor y eliges el plan que mejor se adapte a ti.</p>
+                <h3>🔑 Beneficios del financiamiento:</h3>
+                <ul class="features-list">
+                    <li>Financiamos hasta el 80% del valor</li>
+                    <li>Tasa fija RGO desde 12% anual</li>
+                    <li>Plazo hasta 96 meses</li>
+                    <li>Seguro de vehículo incluido el primer año</li>
+                    <li>Trámites directos en el concesionario</li>
+                    <li>Pre-aprobación online en 15 minutos</li>
+                </ul>
+            </div>
+
+            <div id="content-prestamo-hipotecario" class="content-display">
+                <h2>🏠 Préstamo Hipotecario RGO Smart</h2>
+                <p>Haz realidad el sueño de tu casa propia con nuestro préstamo hipotecario del Banco RGO. Las mejores condiciones del mercado y acompañamiento personalizado.</p>
+                <h3>🏡 Condiciones preferenciales:</h3>
+                <ul class="features-list">
+                    <li>Financiamos hasta el 80% del valor de la propiedad</li>
+                    <li>Tasa fija RGO desde 10.75% anual</li>
+                    <li>Plazo hasta 26 años</li>
+                    <li>Cuota inicial desde 15%</li>
+                    <li>Avalúo gratuito de la propiedad</li>
+                    <li>Asesoría legal incluida sin costo</li>
+                    <li>Seguro de desgravamen incluido</li>
+                </ul>
+            </div>
+
+            <!-- Seguros -->
+            <div id="content-seguro-vida" class="content-display">
+                <h2>❤️ Seguro de Vida Integral RGO</h2>
+                <p>Protege a tu familia con la tranquilidad que merecen. Nuestro seguro de vida del Banco RGO ofrece la cobertura más completa del mercado con primas accesibles.</p>
+                <h3>🛡️ Coberturas incluidas:</h3>
+                <ul class="features-list">
+                    <li>Muerte por cualquier causa: hasta RD$6,000,000</li>
+                    <li>Invalidez total y permanente</li>
+                    <li>Enfermedades graves (Viral, Terminal)</li>
+                    <li>Gastos funerarios hasta RD$500,000</li>
+                    <li>Renta mensual para beneficiarios</li>
+                    <li>Cobertura mundial las 24 horas</li>
+                </ul>
+            </div>
+
+            <div id="content-seguro-auto" class="content-display">
+                <h2>🚙 Seguro de Auto RGO Todo Riesgo</h2>
+                <p>Circula con total confianza con nuestro seguro vehicular del Banco RGO. Cobertura integral, asistencia 24/7.</p>
+                <h3>🔧 Servicios incluidos:</h3>
+                <ul class="features-list">
+                    <li>Cobertura todo riesgo (robo, colisión, incendio)</li>
+                    <li>Asistencia vial RGO 24/7 en todo el país</li>
+                    <li>Vehículo de reemplazo mientras se repara</li>
+                    <li>Talleres autorizados RGO de primera</li>
+                    <li>Gastos médicos hasta RD$500,000</li>
+                    <li>Responsabilidad civil hasta RD$4,000,000</li>
+                </ul>
+            </div>
+
+            <div id="content-seguro-hogar" class="content-display">
+                <h2>🏡 Seguro de Hogar RGO Completo</h2>
+                <p>Tu hogar es tu mayor inversión, protégelo con el seguro más completo del Banco RGO. Cobertura contra todo tipo de riesgos y servicios adicionales únicos en el mercado.</p>
+                <h3>🏠 Protección total:</h3>
+                <ul class="features-list">
+                    <li>Estructura contra catastrofes</li>
+                    <li>Contenido y bienes personales</li>
+                    <li>Robo y hurto dentro y fuera del hogar</li>
+                    <li>Responsabilidad familiar</li>
+                    <li>Servicio de setico y electricidad 24/7</li>
+                    <li>Jardinería y limpieza post-siniestro</li>
+                </ul>
+            </div>
+
+            <!-- Servicios -->
+            <div id="content-banca-digital" class="content-display">
+                <h2>📱 Banca Digital RGO de Primera</h2>
+                <p>Experimenta el futuro de la banca en linea con nuestra plataforma digital premiada del Banco RGO. Seguridad de nivel Policial, interfaz intuitiva y todas las funciones que necesite.</p>
+                <h3>🚀 Funciones avanzadas:</h3>
+                <ul class="features-list">
+                    <li>Autenticación biométrica (huella y rostro)</li>
+                    <li>Transferencias al instante RGO 24/7</li>
+                    <li>Pago de servicios sin comisiones</li>
+                    <li>Inversiones desde la app RGO</li>
+                    <li>Chat con asistencia IA las 24 horas</li>
+                    <li>Notificaciones inteligentes en tiempo real</li>
+                </ul>
+            </div>
+
+            <div id="content-cajeros" class="content-display">
+                <h2>🏧 Red de Cajeros Inteligentes RGO</h2>
+                <p>Accede a tu dinero cuando y donde lo necesites. El Banco RGO cuenta con la red de cajeros más amplia del país con tecnología de última.</p>
+                <h3>🌐 Servicios disponibles:</h3>
+                <ul class="features-list">
+                    <li>Más de 1000 cajeros RGO a nivel nacional</li>
+                    <li>Retiros sin tarjeta usando código QR</li>
+                    <li>Depósitos las 24 horas los 7 días</li>
+                    <li>Consultas de saldo y movimientos</li>
+                    <li>Pago de préstamos y tarjetas RGO</li>
+                    <li>Recarga de celular y servicios</li>
+                </ul>
+            </div>
+
+            <div id="content-transferencias" class="content-display">
+                <h2>💸 Transferencias RGO Sin Límites</h2>
+                <p>Envía dinero de forma instantánea y segura dentro y fuera del país con el sistema de transferencias del Banco RGO. Las tarifas más bajas del mercado.</p>
+                <h3>🌍 Opciones de envío:</h3>
+                <ul class="features-list">
+                    <li>Transferencias nacionales instantáneas RGO</li>
+                    <li>Envíos internacionales a más de 60 países</li>
+                    <li>Tarifas RGO desde RD$15 pesos</li>
+                    <li>Límites hasta RD$800,000 diarios</li>
+                    <li>Confirmación por SMS y email</li>
+                    <li>Historial completo de transacciones</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Servicios Destacados del Banco RGO</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="showContent('cuenta-ahorro')">
+                    <span class="service-icon">💳</span>
+                    <h3>Cuentas Digitales</h3>
+                    <p>Cuentas de ahorro y corriente RGO con tecnología avanzada, tasas competitivas y beneficios únicos para tu comodidad financiera diaria.</p>
+                </div>
+                <div class="service-card" onclick="showContent('fondos-inversion')">
+                    <span class="service-icon">📈</span>
+                    <h3>Inversiones Inteligentes</h3>
+                    <p>Multiplica tu dinero con nuestros productos de inversión RGO respaldados por expertos financieros y tecnología de análisis avanzada.</p>
+                </div>
+                <div class="service-card" onclick="showContent('prestamo-personal')">
+                    <span class="service-icon">🏠</span>
+                    <h3>Préstamos Express</h3>
+                    <p>Financia tus proyectos con nuestros préstamos RGO flexibles, tasas preferenciales y aprobación en tiempo récord.</p>
+                </div>
+                <div class="service-card" onclick="showContent('seguro-vida')">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Seguros Integrales</h3>
+                    <p>Protege tu patrimonio con nuestros seguros RGO de amplia cobertura y primas accesibles para toda la familia.</p>
+                </div>
+                <div class="service-card" onclick="showContent('banca-digital')">
+                    <span class="service-icon">📱</span>
+                    <h3>Banca Digital RGO</h3>
+                    <p>Realiza todas tus operaciones bancarias desde cualquier lugar con nuestra plataforma digital RGO premiada internacionalmente.</p>
+                </div>
+                <div class="service-card" onclick="showContent('sobre-Randy G.')">
+                    <span class="service-icon">👨‍💻</span>
+                    <h3>Desarrollado por Randy G.</h3>
+                    <p>Conoce al joven talento de 24 años, estudiante de informática, que desarrolló esta innovadora plataforma bancaria digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>🏦 Productos RGO</h3>
+                    <ul>
+                        <li><a onclick="showContent('cuenta-ahorro')">Cuenta de Ahorro RGO Plus</a></li>
+                        <li><a onclick="showContent('cuenta-corriente')">Cuenta Corriente RGO Premium</a></li>
+                        <li><a onclick="showContent('prestamo-personal')">Préstamos Personales RGO</a></li>
+                        <li><a onclick="showContent('fondos-inversion')">Fondos de Inversión RGO</a></li>
+                        <li><a onclick="showContent('certificados')">Certificados de Depósito RGO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>💼 Servicios RGO</h3>
+                    <ul>
+                        <li><a onclick="showContent('banca-digital')">Banca Digital RGO</a></li>
+                        <li><a onclick="showContent('transferencias')">Transferencias RGO</a></li>
+                        <li><a onclick="showContent('seguro-vida')">Seguros RGO</a></li>
+                        <li><a onclick="showContent('cajeros')">Red de Cajeros RGO</a></li>
+                        <li><a onclick="showContent('mercado-valores')">Trading RGO Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>📞 Contacto</h3>
+                    <ul>
+                        <li>📱 (809) 533-4418</li>
+                        <li>📧 Cup.dawn.d@gmail.com.do</li>
+                        <li>📍 Av. Mauricio Baez, Santo Domingo</li>
+                        <li>🕒 Lun-Vie: 7:00AM - 5:00PM</li>
+                        <li>🕒 Sáb: 8:00AM - 12:00PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>👨‍💻 Desarrollador</h3>
+                    <ul>
+                        <li><a onclick="showContent('sobre-Randy G.')">Randy G. RGO</a></li>
+                        <li><a onclick="showContent('proyecto-academico')">Proyecto Académico</a></li>
+                        <li><a onclick="showContent('tecnologias')">Tecnologías Utilizadas</a></li>
+                        <li>📚 Estudiante de Informática</li>
+                        <li>🎂 24 años de edad</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Banco RGO. Todos los derechos reservados. | Supervisado por la Superintendencia de Bancos</p>
+                <p style="margin-top: 0.5rem; font-style: italic; color: #2b2481;">
+                    💻 Desarrollado con pasión por <strong>Randy G. RGO</strong> - Estudiante de Licenciatura en Informática, 24 años | Proyecto Académico Original
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

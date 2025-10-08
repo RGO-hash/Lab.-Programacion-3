@@ -1,0 +1,45 @@
+# robots.txt for Banco RGO Website
+# Developed by Randy G. RGO - Computer Science Student, Age 24
+# Academic Project - Banking Website Demo
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block access to sensitive files (if any)
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /temp/
+Disallow: /backup/
+
+# Allow CSS and JavaScript files for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /icons/
+
+# Sitemap location
+Sitemap: https://Randy G.github.io/banco-RGO-website/sitemap.xml
+
+# Additional information
+# Website: Banco RGO Banking Demo
+# Developer: Randy G. RGO
+# Purpose: Academic Computer Science Project
+# Institution: [University Name]
+# Contact: cup.dawn.d@gmail.com
+# Phone: (809) 533-4418
+
+# Cache directives for better SEO
+# Last updated: 2025-01-23

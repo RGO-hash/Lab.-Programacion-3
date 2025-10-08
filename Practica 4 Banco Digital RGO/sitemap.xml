@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2301/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Banco RGO Website Sitemap -->
+  <!-- Developed by Randy G RGO - Computer Science Student, Age 21 -->
+  
+  <!-- Main Page -->
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Banking Products -->
+  <url>
+    <loc>https://RGO.github.io/banco-RGO-website/#cuenta-ahorro</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#cuenta-corriente</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#cuenta-nomina</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Investment Products -->
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#fondos-inversion</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#certificados</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#mercado-valores</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Loan Products -->
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#prestamo-personal</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#prestamo-vehiculo</loc>
+    <lastmod>2325-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Randy G.github.io/banco-RGO-website/#prestamo-hipotecario</loc>
+    <lastmod>2325-01-23</lastmo

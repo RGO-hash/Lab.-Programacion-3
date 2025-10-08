@@ -1,0 +1,190 @@
+{
+  "name": "Banco Suarez - Banking Website",
+  "short_name": "Banco Suarez",
+  "description": "Sitio web bancario profesional desarrollado por Arowarlin Suarez - Proyecto académico de Licenciatura en Informática",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3c72",
+  "theme_color": "#2a5298",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  
+  "categories": [
+    "finance",
+    "business",
+    "education",
+    "productivity"
+  ],
+  
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Banco Suarez Desktop View"
+    },
+    {
+      "src": "screenshots/mobile-screenshot.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Banco Suarez Mobile View"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Cuentas",
+      "short_name": "Cuentas",
+      "description": "Ver productos de cuentas bancarias",
+      "url": "/#cuenta-ahorro",
+      "icons": [
+        {
+          "src": "icons/shortcut-accounts.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Inversiones",
+      "short_name": "Inversiones",
+      "description": "Explorar opciones de inversión",
+      "url": "/#fondos-inversion",
+      "icons": [
+        {
+          "src": "icons/shortcut-investments.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Préstamos",
+      "short_name": "Préstamos",
+      "description": "Solicitar préstamos personales",
+      "url": "/#prestamo-personal",
+      "icons": [
+        {
+          "src": "icons/shortcut-loans.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Sobre Arowarlin",
+      "short_name": "Desarrollador",
+      "description": "Conocer al desarrollador del sitio",
+      "url": "/#sobre-arowarlin",
+      "icons": [
+        {
+          "src": "icons/shortcut-developer.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://arowarlin.github.io/banco-suarez-website/"
+    }
+  ],
+
+  "prefer_related_applications": false,
+
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+bancosuarez",
+      "url": "/?action=%s"
+    }
+  ],
+
+  "developer": {
+    "name": "Arowarlin Suarez",
+    "age": 21,
+    "education": "Licenciatura en Informática",
+    "email": "arowarlinsuarez@gmail.com",
+    "phone": "(809) 210-2490",
+    "github": "https://github.com/Arowarlin",
+    "location": "Santo Domingo, República Dominicana"
+  },
+
+  "academic_info": {
+    "project_type": "Academic Website Project",
+    "course": "Web Development / Computer Science",
+    "institution": "Universidad [Nombre]",
+    "year": 2025,
+    "inspiration": "Banreservas architecture (not copied)",
+    "technologies": ["HTML5", "CSS3", "JavaScript ES6+"],
+    "purpose": "Demonstrate web development skills and knowledge"
+  },
+
+  "features": [
+    "Dynamic navigation system",
+    "Responsive design (mobile-first)",
+    "Interactive animations",
+    "Banking services simulation",
+    "Professional UI/UX design",
+    "Cross-browser compatibility",
+    "PWA capabilities",
+    "SEO optimized"
+  ]
+}
